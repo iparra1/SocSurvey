@@ -67,6 +67,34 @@ Based on our graphical results, the relationship shown between the groups form t
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+To view the results of our data numerically, we will use a two-way table with row percents using the rowPerc function from the tigerstats package.
+```{r}
+rowPerc(race_table)
+
+```
+Of those in the WHITE group, 39.01% voted YES on gun ownership, 60.99% voted NO. Of those in the BLACK group, 16.87% voted YES on gun ownership, 83.13% voted NO. Of those in the OTHER group, 13.93% voted YES on gun ownership, 86.07% voted NO. After viewing the data numerically, both BLACK and OTHER strongly voted NO on gun ownership, whereas the group WHITE had more YES on gun ownership compared to the two other groups.
+
+```{r}
+rowPerc(sex_table)
+```
+Of those in the MALE group, 39.76% voted YES, 60.24% voted NO. Of those in the FEMALE group, 27.32% voted YES, 72.68 voted NO. We can see that more FEMALES voted NO on gun ownership than the MALES.
+
+```{r}
+rowPerc(polviews_table)
+```
+Of those in the LIBERAL group, 24.52% voted YES, 75.48% voted NO. Of those in the MODERATE group, 33.20% voted YES, 66.80% voted NO. Of those in the CONSERVATIVE group, 42.17% voted YES, 57.83% voted NO. Regardless of political views, all three groups want nothing to do with gun ownership.
+
+```{r}
+rowPerc(cappun_table)
+```
+Of those in the FAVOR group 41.44% voted YES, 58.56% voted NO. Of those in the OPPOSE group 20.58% voted YES, 79.42% voted NO. Although both groups have the majority decision of NO, those that oppose capital punishment want nothing to do with gun ownership. This could mean that if someone doesn’t believe in capital punishment, they obviously do not like guns either.
+
+```{r}
+rowPerc(god_table)
+```
+Comparing the No’s, MAYBE’s, and YES’s we can seee that about 30% voted YES on gun ownership and about 68% voted NO. We can see that there are more people who do not beleive in GOD that want nothing to do with gun ownership.
+
+
 # Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
