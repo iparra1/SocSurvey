@@ -18,7 +18,11 @@ source("Import_GSS_2014_haven.R")
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->   
 
 ####This study deals with questions about possible relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data is from the 2014 general social survey.
+The General Social Survey (GSS) is a survey that has been conducted every two years since 1972. The GSS monitors social change in American society and is one of the most important studies in the social sciences. The data collected in this particular study is based on the opinions of the respondents interviewed in 2010 and were also later interviewed in 2012 and 2014. But, for the purpose of this report, we will be using only the data from 2014.
 
+Our research question is: Was there a relationship between gun ownership and race, sex, political views, opinions on capitol punishment, or belief in God in 2014?
+
+This study deals with questions about possible relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data is from the 2014 general social survey.
 
 
 # Methods
