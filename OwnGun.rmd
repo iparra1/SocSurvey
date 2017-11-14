@@ -10,6 +10,7 @@ output:
 require(tigerstats)
 require(tidyverse)
 source("Import_GSS_2014_haven.R")
+source("makeTables.R")
 ```
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
@@ -34,6 +35,30 @@ source("Import_GSS_2014_haven.R")
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+barchartGC(race_table,type="percent" , main= "Race vs. Gun Ownership")
+```
+After viewing this data graphically, it appears that WHITE, BLACK, and OTHER all voted “no” on gun ownership. This means that people should not own guns themselves
+
+```{r}
+barchartGC(sex_table,type="percent" , main= "Sex vs. Gun Ownership")
+```
+In this dataset, the comparison we can determine is that both males and females say “no” to gun ownership.
+
+```{r}
+barchartGC(polviews_table,type="percent" , main= "Political Beliefs vs. Gun Ownership")
+```
+In this dataset we are still seeing a lot of “no” between the groups.
+
+```{r}
+barchartGC(cappun_table,type="percent" , main= "Capital Punishment vs. Gun Ownership")
+```
+ALthough in this dataset, the idea of no ownership of guns stands strong especially with those that believe in capital punishment.
+
+```{r}
+barchartGC(god_table,type="percent", main= "Belief in God vs. Gun Ownership")
+```
+The relationship that we can see here is that it is completely even between all of the groups, saying “yes” or “no”.
 
 ### Numerical Descriptive Results
 
