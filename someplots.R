@@ -1,0 +1,7 @@
+barchartGC(educ_table,type="percent")
+barchartGC(god_table,type="percent")
+barchartGC(race_table,type="percent")
+barchartGC(sex_table,type="percent")
+barchartGC(polviews_table,type="percent")
+barchartGC(cappun_table,type="percent")
+barchartGC(degree_table,type="percent")
