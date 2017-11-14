@@ -60,6 +60,9 @@ barchartGC(god_table,type="percent", main= "Belief in God vs. Gun Ownership")
 ```
 The relationship that we can see here is that it is completely even between all of the groups, saying “yes” or “no”.
 
+
+Based on our graphical results, the relationship shown between the groups form the survey is that a lot of the participants are saying “no” to gun ownership. There is hardly any chance that one of these groups will change their response to yes. The only relationship is the comparison of belief in God and gun ownership. Each group had over 60% vote “no” and about 35% vote “yes”
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
