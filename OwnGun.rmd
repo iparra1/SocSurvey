@@ -24,6 +24,21 @@ source("Import_GSS_2014_haven.R")
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+The data for the General Social Survey is large, having 2044 observations, 3542 variables, and includes not only the 2010 data, but data from 2012 and 2014. To make the data easier to use, we must trim it down. We will be using r code stored in a separate .r file to help do this. We start with GSS data from the three years and then use the select function from the dplyr package to extract 12 variables that we think are important, but for this research paper, we will only be using the following variables; belief in the gun ownership, race, sex, political beliefs,opinions on capitol punishment and belief in God. But, we still need to clean the data up a bit more. This was done in the following ways:
+
+Gun ownership was originally recorded as YES, NO, IAP, REFUSED, and DK. Using the revalue function, we changed the IAP, REFUSED and DK value to NA.
+
+Race was originally recorded as having WHITE, BLACK, OTHER, and IAP. Using the revalue function, we changed the IAP value to that of NA.
+
+For sex, it originally had three values; MALE, FEMALE, and IAP. Again, using the revalue function, we changed the IAP to an NA value.
+
+For political beliefs, it was orginally recorded as having 6 different levels. Using the revalue function, we condensed the number of levels down to three. For the responses of IAP and DK we changed the value to NA. For the responses of EXTREMELY LIBERAL and SLIGHTLY LIBERAL we changed the value to LIBERAL. For the responses of SLIGHTLY CONSERVATIVE and EXTREMELY CONSERVATIVE we changed the value to CONSERVATIVE.
+
+Capital punishment was origninally recorded as IAP and NA. Usinf the revalue function, we changed the IAP value to that of NA.
+
+One’s belief in God was originally recorded as having 8 different levels. Again, using the revalue function, we condensed the number of levels down to four. For the responses DONT BELIEVE and NO WAY TO FIND OUT, we changed the value to no. For the responses SOME HIGHER POWER, BELIEVE SOMETIMES, BELIEVE BUT DOUBTS, and DK (for don’t know), we had them represented by the value maybe. For the response KNOW GOD EXISTS, we used the value yes. For the response IAP, we used the value NA.
+
+To help answer our research question, we will be omitting all NA responses, and then view the results of the data both graphically and numerically. Since we will be comparing factor variables, we will use bar charts and two-way tables. Then, finally, we will do an inferential test using the chi-square test.
 
 #Results
 
