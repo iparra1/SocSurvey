@@ -10,6 +10,7 @@ output:
 require(tigerstats)
 require(tidyverse)
 source("Import_GSS_2014_haven.R")
+source("makeTables.R")
 ```
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
@@ -43,6 +44,52 @@ source("Import_GSS_2014_haven.R")
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+Looking at the graphical and numerical results alone is not enough to tell us if these results also apply to the population at large. To do this, we will need to run an inferential test. The one we will use is the chi-square test.
+
+We will now need to run four chi-square tests using the chisqtestGC function from the tigerstats package. We will run each test with the assumption that there is no relationship between belief in the Big Bang and the other variable in question; race, sex, political views, belief on capital punishment and belief in God.
+
+First we will test if there is a realtionship between Sex and Gun ownership
+```{r}
+chisqtestGC(sex_table)
+```
+Our P-Value is 0. The chances of getting such a result are infinitely small if the null hypothes is true. We therefore choose to reject the null hypothesis. So it appears that Sex and belief in gun ownership are related.
+
+
+Now we will test race and gun ownership
+```{r}
+chisqtestGC(race_table)
+
+```
+Our P-Value is 0. The chances of getting such a result are infinitely small if the null hypothesis is true. We therefore choose to reject the null hypothesis. So it appears that Race and belief in gun ownership are related.
+
+Next we will test gun ownership and political views
+```{r}
+chisqtestGC(polviews_table)
+```
+Our P-Value is 0. The chances of getting such a result are infinitesimally small if the null hypothesis is true. We therefore choose to reject the null hypothesis. So it appears that political views and belief in gun ownership are related.
+
+For the next chisquared test we will test capital punishment
+```{r}
+chisqtestGC(cappun_table)
+```
+Our P-Value is 0. The chances of getting such a result are  small if the null hypothesis is true. We therefore choose to reject the null hypothesis. So it appears that belief in capital punishment and belief in gun ownership are related.
+
+This chi test will test belief in god vs gun ownership
+```{r}
+chisqtestGC(god_table)
+```
+Our P-Value is 0.9739. This means the probability of getting a sample like this under conditions when the null hypothesis is true, is about 1 in 100 (about one percent). This is below our threshold of belief (which is typically five percent). Since the P-Value is too low, we will reject the null hypothesis and conclude that there is a relationship between belief in God and belief in Gun Ownership. # Discussion and Conclusion
+
+After viewing the results graphically, numerically, and running chi-square tests on the data, we can conclude the following:
+
+Race and gun ownership are related.
+Sex and gun ownership are related.
+Political views and gun ownership are related.
+Belief in capital punishment and gun ownership are related.
+Belief in God and gun ownership are related.
+If we were to make a profile of those that voted YES on gun ownership they might be WHITE, MALE, CONSERVATIVE, in FAVOR of capital punishment, and MAYBE believe or ACTUALLY believe in GOD.
+
+If we were to make a profile of those that voted NO on gun ownership they might be BLACK or OTHER, FEMALE, LIBERAL or MODERATE, OPPOSE capital punishment, and DO NOT believe in GOD.
 
 # Discussion and Conclusion
 
